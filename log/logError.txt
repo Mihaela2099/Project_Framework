@@ -1,0 +1,14 @@
+Unknown database 'admin_sawsads'		15/11/22 21:38:51		/LI/authentication.php
+Failed to open connect.php file		15/11/22 21:43:11		/LI/authentication.php
+Unknown database 'admin_sawadasd'		15/11/22 22:41:48		/LI/index.php
+Unknown database 'admin_sawadasd'		15/11/22 22:43:44		/LI/authentication.php
+Unknown database 'admin_sawadasd'		26/11/22 09:55:39		/LI/authentication.php
+Unknown database 'admin_saww'		03/12/22 10:17:34		/LI/authentication.php
+Unknown database 'admin_saww'		03/12/22 10:17:37		/LI/index.php
+Unknown database 'admin_saww'		03/12/22 10:17:38		/LI/index.php
+Unknown database 'admin_saww'		03/12/22 10:17:39		/LI/index.php
+Unknown database 'admin_saww'		03/12/22 10:17:39		/LI/index.php
+Unknown database 'admin_saws'		03/12/22 10:57:23		/LI/authentication.php
+Unknown database 'admin_saws'		03/12/22 10:57:32		/LI/index.php
+Unknown database 'admin_saws'		03/12/22 10:57:33		/LI/index.php
+Unknown database 'admin_saws'		03/12/22 10:57:33		/LI/index.php

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <!-- angular cdn -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+<body  style="background-image:url('img/login.jpg')">
+
+<div ng-app="myapp" ng-controller="mycontroller">
+<form name="form1" >
+	
+<div class="container">
+  <h2 align="center">Welcome</h2>
+     <!--<label for="uname"><b>Username</b></label>-->
+   <input type="text" ng-model="username" placeholder="Enter Username" name="uname" >
+    <span id="span-username" hidden="true" style="color: rgb(128, 0, 0)">Enter the correct username</span><br/>
+
+     <!--<label for="psw"><b>Password</b></label>-->
+    <input type="password" ng-model="password" placeholder="Enter Password" name="psw" >
+    <span  id="span-password" hidden="true" style="color: rgb(128, 0, 0)">Enter the correct password</span><br/>
+
+    <button type="submit" ng-click="authButtonSubmit()">Login</button>
+	</span>
+  </div>
+</form> 
+</div>
+
+</body>
+</html>

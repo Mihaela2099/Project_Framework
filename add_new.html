@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+
+<head>
+  <title>Add Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection, tv" />
+  <link rel="stylesheet" href="css/style-print.css" type="text/css" media="print" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <!-- angular cdn -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- my stylesheet -->
+  <script src="script.js"></script>
+</head>
+
+<body style="background-image:url('img/login.jpg')">
+  <div id="wrapper">
+    <div class="title">
+      <div class="title-top">
+        <div class="title-left">
+          <div class="title-right">
+            <div class="title-bottom">
+              <div class="title-top-left">
+                <div class="title-bottom-left">
+                  <div class="title-top-right">
+                    <div class="title-bottom-right">
+                      <h1>Online Shopping<br /> <span>Wellcome on our page </span> </h1>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="noscreen" />
+    <div class="content">
+      <div ng-app="myapp" ng-controller="mycontroller">
+        <div class="column-left">
+          <h3>MENU</h3>
+          <a href="#skip-menu" class="hidden">Skip menu</a>
+          <ul class="menu">
+            <li><a href="index.html">Afizeaza produse</a></li>
+            <li><a class="active">Adauga produse</a></li>
+            <li><a href="delete.html">Sterge Produse</a></li>
+          </ul>
+        </div>
+        <div id="skip-menu"></div>
+        <div class="column-right">
+          <div class="box">
+            <div class="box-top"></div>
+            <div class="box-in">
+              <h3>ADAUGA O TRANZACTIE NOUA</h3>
+              <div class='withForm'>
+                <div class='d-flex'>
+                  <div>
+                    <label>Cod produs</label>
+                    <input type="hidden" ng-model='cod'>
+                    <input type="text" ng-model='produs' class='form-control' autocomplete="off">
+                  </div>
+                  <div>
+                    <label>Cod client</label>
+                    <input type="text" ng-model='client' class='form-control'>
+                  </div>
+                  <div>
+                    <label>Cantitate</label>
+                    <input type="number" ng-model='cantitate' class='form-control'>
+                  </div>
+                  <div>
+                    <label>Semn En gros</label>
+                    <select class="form-control" ng-model='semn'>
+                      <option value='$'>Dolar</option>
+                      <option value='€'>Euro</option>
+                      <option value='L'>Leu</option>
+                    </select>
+                  </div>
+                  <div class='buttn'>
+                    <input type="submit" value=ADD class='btn btn-success' ng-click='insert()'>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="bottom:0; position:sticky">
+    <form name='f1' action="logout.php" method="POST" style="border : none">
+      <div>
+
+        <button type="submit" style="width: 15%;">Log-Out</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

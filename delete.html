@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+
+<head>
+  <title>Delete Page</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <link rel="stylesheet" href="css/style-print.css" type="text/css" media="print" />
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+  <style>
+    table ,th,td{
+  border:  1px solid black;
+  font: 0.2em sans-serif;
+  /* border-collapse: collapse; */
+  width:100%;
+
+}
+.phonesTable th{
+  color: #626262;
+}
+  </style>
+</head>
+
+<body style="background-image:url('img/login.jpg')">
+  <div id="wrapper">
+    <div class="title">
+      <div class="title-top">
+        <div class="title-left">
+          <div class="title-right">
+            <div class="title-bottom">
+              <div class="title-top-left">
+                <div class="title-bottom-left">
+                  <div class="title-top-right">
+                    <div class="title-bottom-right">
+                      <h1>Online Shopping<br /> <span>Wellcome on our page </span> </h1>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="noscreen" />
+    <div class="content">
+      <div ng-app="myapp" ng-controller="mycontroller" ng-init="loadTable()">
+        <div class="column-left">
+          <h3>MENU</h3>
+          <a href="#skip-menu" class="hidden">Skip menu</a>
+          <ul class="menu">
+            <li><a href="index.html">Afizeaza tranzactiile</a></li>
+            <li><a name="addProd" href="add_new.html">Adauga comanda</a></li>
+            <li><a class="active">Sterge comanda</a></li>
+            <li><a href="log/logFile.txt">Afiseaza log</a></li>
+          </ul>
+        </div>
+        <div id="skip-menu"></div>
+        <div class="column-right">
+          <div class="box">
+            <div class="box-top"></div>
+            <div class="box-in">
+
+
+              <div class="date_form w3-container w3-border w3-round-xlarge w3-card-8 w3-hover-border-green">
+                <h2 style="text-align: center;color: darkcyan;">Lista tranzactiilor</h2>
+                <table class="phonesTable" style="border:  1px solid black;
+                font: 6em sans-serif;
+                border-collapse: collapse;
+                width:100%;">
+                  <tr>
+                    <th style="width:30%">Produs</th>
+                    <th style="width:30%">Denumire</th>
+                    <th style="width:30%">Persoana de contact</th>
+                    <th>Pret</th>
+                    <th></th>
+                  </tr>
+                  <tr ng-repeat='p in JSONValues track by $index'>
+                    <td style="width:30%"class="w3-border w3-padding-16"><img width="100%" height="100" src="{{p.image}}">
+                    </td>
+                    <td style="width:30%"class="w3-border w3-padding-16" style="color:blueviolet">{{p.name}}</td>
+                    <td style="width:30%"class="w3-border w3-padding-16">{{p.pers_de_contact}}</td>
+                    <td ng-show="p.semn_en_gros=='L'"class="w3-border w3-padding-16">{{p.pret_amanuntul}} Lei</td>
+                    <td ng-hide="p.semn_en_gros=='L'"class="w3-border w3-padding-16">{{p.pret_en_gros}} {{p.semn_en_gros}}</td>
+                    <td><button style="width:100%;height:100; background-color: rgb(146, 21, 21);" class='btn btn-danger' ng-click='delete(p.cod)'>Delete</button></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div style="bottom:0; position:sticky">
+    <form name='f1' action="logout.php" method="POST" style="border : none">
+      <div>
+
+        <button name="logout" type="submit" style="width: 15%;">Log-Out</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
